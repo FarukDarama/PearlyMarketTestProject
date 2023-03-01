@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Dell/Desktop/PearlyMarketTest2/src/test/java/pearlymarket/test/ayhan">
+        <classes>
+            <class name="pearlymarket.test.ayhan.US07_CompareTest">
+                <methods>
+                    <include name="compareTest1"/>
+                    <include name="compareTest2"/>
+                    <include name="compareTest3"/>
+                    <include name="compareTest4"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.ayhan.US08_WishlistTest">
+                <methods>
+                    <include name="wishListTest1"/>
+                    <include name="wishListTest2"/>
+                    <include name="wishListTest3"/>
+                    <include name="wishListTest4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

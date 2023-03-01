@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/clkem/IdeaProjects/PearlyMarketTest2/src/test/java/pearlymarket/test/emre">
+        <classes>
+            <class name="pearlymarket.test.emre.US19_TC01">
+                <methods>
+                    <include name="urunSepeteEkleTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC02">
+                <methods>
+                    <include name="chartCheckoutUrunGoruntulemeTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC03">
+                <methods>
+                    <include name="faturaAyrintilariTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC04">
+                <methods>
+                    <include name="toplamOdenecekFiyatTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC05">
+                <methods>
+                    <include name="paymentMethodsTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC06">
+                <methods>
+                    <include name="alisverisiTamamlamaTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US19_TC07">
+                <methods>
+                    <include name="myAccountOrdersYapilanAlisverisTest"/>
+                </methods>
+            </class>
+            <class name="pearlymarket.test.emre.US22_TC01">
+                <methods>
+                    <include name="couponAlisverisTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

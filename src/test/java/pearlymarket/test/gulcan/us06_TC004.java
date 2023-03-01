@@ -1,0 +1,53 @@
+package pearlymarket.test.gulcan;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pearlymarket.pages.HomePage;
+import pearlymarket.pages.MyAccount;
+import pearlymarket.pages.ShoppingPage;
+import pearlymarket.pages.UserLoginPage;
+import pearlymarket.utilities.ConfigReader;
+import pearlymarket.utilities.Driver;
+import pearlymarket.utilities.ReusableMethods;
+
+public class us06_TC004 {
+
+    HomePage homePage;
+    UserLoginPage userLoginPage;
+
+    @Test
+    public void us06_tc004() {
+        HomePage homePage = new HomePage();
+        UserLoginPage userLoginPage = new UserLoginPage();
+        MyAccount myAccount = new MyAccount();
+        ShoppingPage shoppingPage = new ShoppingPage();
+
+        //Verilen adrese git
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+
+        //MyAccount sayfasina gec
+        ReusableMethods.clickByJS(homePage.icon);
+        ReusableMethods.waitFor(3);
+        Assert.assertTrue(myAccount.myAccountText.isDisplayed());
+
+
+        //Alisverise sepetine git
+        ReusableMethods.clickByJS(shoppingPage.iconCartButton);
+        ReusableMethods.waitFor(2);
+        ReusableMethods.clickByJS(shoppingPage.viewCartButton);
+        ReusableMethods.waitFor(5);
+
+        //Plus ve minus butonuyla ürünlerin adetini cikart ve azalt
+        shoppingPage.plusButton.click();
+        ReusableMethods.waitFor(5);
+        shoppingPage.minusButton.click();
+        ReusableMethods.waitFor(5);
+
+        //Ürün adetini güncelle
+        shoppingPage.updateButton.click();
+        ReusableMethods.waitFor(5);
+
+
+
+    }
+}
